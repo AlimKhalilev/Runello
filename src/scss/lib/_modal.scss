@@ -1,0 +1,85 @@
+// === Modal ===
+
+.overlay_modal {
+    z-index: 20;
+}
+
+.modal {
+    position: fixed;
+    top: -999px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease-in-out;
+    z-index: 21;
+
+    &.visible {
+        top: 50%;
+    }
+}
+
+.modal {
+    padding: 3rem 3.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 8px rgba(86, 42, 1, 0.1);
+    background-color: $color_white;
+    border: 1px solid $color_table_border;
+    width: 43rem;
+
+    @media ($media_xs) {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    &-header {
+        text-align: center;
+        line-height: 1.27;
+        margin-bottom: 2rem;
+        padding-right: 2rem;
+
+        @media ($media_xs) {
+            margin-bottom: 1.2rem;
+
+            .section_title {
+                font-size: 1.6rem;
+            }
+        }
+
+        .section_title {
+            text-align: left;
+        }
+    }
+
+    &-content {
+
+        .form-group {
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+}
+
+.modal-close {
+    position: absolute;
+    right: 3.5rem;
+    top: calc(3rem + 0.3rem);
+    cursor: pointer;
+    display: inline-flex;
+
+    @media ($media_sm) {
+        right: 1.5rem;
+        top: calc(1.5rem + 0.3rem);
+    }
+
+    // .modal-close__icon
+
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+
+// === / Modal

@@ -1,0 +1,119 @@
+<div class="modal" id="modal_enter">
+    <div class="modal-close" data-closeModal>
+        <svg class="modal-close__icon"><use xlink:href='img/main.svg#icon-close'></use></svg>
+    </div>
+    <div class="modal-header">
+        <h2 class="section_title">Вход</h2>
+    </div>
+    <div class="modal-content">
+        <div class="form-group">
+            <span class="form-group__title">Введите E-mail</span>
+            <input class="form-group__input custom-input" type="email" placeholder="Mail@gmail.com">
+            <span class="form-group__error">Сообщение об ошибке</span>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group__header">
+                <span class="form-group__title">Введите пароль</span>
+                <button class="btn btn--clean form-group__link" data-changeModal="modal_restore">
+                    <span>Забыли пароль?</span>
+                </button>
+            </div>
+            <input class="form-group__input custom-input" type="password" placeholder="123456">
+        </div>
+
+        <div class="form-group">
+            <label class="checkbox">
+                <input class="checkbox__origin visually_hidden" type="checkbox">
+                <div class="checkbox__custom">
+                    <svg class="checkbox__icon"><use xlink:href='img/main.svg#icon-checkbox'></use></svg>
+                </div>
+                <span class="checkbox__text">Запомнить меня</span>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group__buttons">
+                <button class="btn form-group__button">Войти</button>
+                <button class="btn form-group__button btn--big btn--clean" data-changeModal="modal_reg">У меня нету аккаунта</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal" id="modal_reg">
+    <div class="modal-close" data-closeModal>
+        <svg class="modal-close__icon"><use xlink:href='img/main.svg#icon-close'></use></svg>
+    </div>
+    <div class="modal-header">
+        <h2 class="section_title">Регистрация</h2>
+    </div>
+    <div class="modal-content">
+        <div class="form-group">
+            <span class="form-group__title">Введите E-mail</span>
+            <input class="form-group__input custom-input" type="email" placeholder="Mail@gmail.com">
+            <span class="form-group__error">Сообщение об ошибке</span>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group__header">
+                <span class="form-group__title">Введите пароль</span>
+            </div>
+            <input class="form-group__input custom-input" type="password" placeholder="123456">
+        </div>
+
+        <div class="form-group">
+            <div class="form-group__header">
+                <span class="form-group__title">Повторите пароль</span>
+            </div>
+            <input class="form-group__input custom-input" type="password" placeholder="123456">
+        </div>
+
+        <div class="form-group">
+            <div class="form-group__buttons">
+                <button class="btn form-group__button">Зарегистрироваться</button>
+                <div class="form-group__question">
+                    Уже есть аккаунт? <button class="btn btn--big btn--clean" data-changeModal="modal_enter">Авторизироваться</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal" id="modal_restore">
+    <div class="modal-close" data-closeModal>
+        <svg class="modal-close__icon"><use xlink:href='img/main.svg#icon-close'></use></svg>
+    </div>
+    <div class="modal-header">
+        <h2 class="section_title">Восстановление пароля</h2>
+    </div>
+    <div class="modal-content">
+
+        <div class="form-group">
+            <p class="form-group__text">Введите свой адрес электронной почты, мы направим ссылку для восстановления пароля</p>
+        </div>
+
+        <div class="form-group">
+            <span class="form-group__title">Введите E-mail</span>
+            <input class="form-group__input custom-input" type="email" placeholder="Mail@gmail.com">
+        </div>
+
+        <div class="form-group">
+            <div class="form-group__buttons">
+                <button class="btn form-group__button">Восстановить пароль</button>
+                <button class="btn form-group__button form-group__button--full btn--clean">
+                    <div class="btn__icon btn__icon--left">
+                        <svg class="btn__svg btn__svg--arrow btn__svg--reverse btn__svg--primary"><use xlink:href='img/main.svg#icon-arrowDown'></use></svg>
+                    </div>
+                    <span data-changeModal="modal_enter">Вернуться на страницу авторизации</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="overlay overlay_modal" data-closeModal></div>

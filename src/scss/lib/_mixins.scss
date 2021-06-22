@@ -1,0 +1,434 @@
+// === Mixins [ Шаблоны классов стилей, используемых на всех страницах ]===
+
+// используется для одинаковых отступов внутри секций
+:root {
+    --section_padding: 2rem;
+    --fixed_header_margin: 5rem;
+
+    @media ($media_xs) {
+        --section_padding: 2rem;
+    }
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    background-color: $color_body_bg;
+    font-size: 16px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    @media ($media_lg) {
+        font-size: 15px;
+    }
+
+    &.hideScroll {
+        overflow-y: hidden;
+    }
+}
+
+.mixins {
+    margin-top: 5rem;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+
+    &.visible {
+        visibility: visible;
+        opacity: 0.8;
+    }
+}
+
+.visually_hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.scroll_block_dummy {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+    visibility: hidden;
+}
+
+.section_header {
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+
+.section_title {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.btn {
+
+    // .btn--bordered
+
+    color: $color_white;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    padding: 0.65rem 1.6rem;
+    background-color: $color_primary;
+    border: 2px solid transparent;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+        background-color: darken($color_primary, 10%);
+    }
+
+    &--bordered {
+        border-color: lighten($color_primary, 15%);
+        background-color: $color_white;
+        color: $color_gray;
+
+        &:hover {
+            background-color: $color_white;
+        }
+    }
+
+    // .btn--transparent
+
+    &--transparent {
+        border-color: $color_header;
+        color: lighten($color_gray, 15%);
+        background-color: $color_white;
+        padding: 0.5rem 0.8rem;
+
+        &:hover {
+            background-color: $color_white;
+        }
+    }
+
+    &--clean {
+        padding: 0;
+        color: $color_primary;
+        background-color: transparent;
+        font-weight: 400;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    &--trashcan{
+        background-color: $color_header;
+        padding: 0.3rem 0.2rem;
+        border: 1px solid $color_table_border;
+    }
+
+    // .btn--big
+
+    &--big {
+        font-size: 1.15rem;
+        font-weight: 500;
+    }
+
+    &__icon {
+        display: flex;
+
+        &--white {
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+    
+            background-color: $color_white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &--left {
+            margin-right: 0.6rem;
+        }
+
+        &--right {
+            margin-left: 0.6rem;
+        }
+    }
+
+    &__svg {
+        width: 0.7rem;
+        height: 0.7rem;
+
+        &--arrow {
+            stroke: $color_white;
+            transform: rotate(270deg);
+        }
+
+        &--reverse {
+            transform: rotate(90deg);
+        }
+
+        &--primary {
+            stroke: $color_primary;
+        }
+
+        &--trashcan {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+}
+
+.checkbox {
+    position: relative;
+    display: inline-flex;
+
+    // .checkbox__custom
+
+    &__origin {
+
+        &:checked {
+            ~ .checkbox__custom {
+                background-color: $color_primary;
+            }
+        }
+    }
+
+    &__custom {
+        width: 1.4rem;
+        height: 1.4rem;
+        border: 2px solid $color_primary;
+        border-radius: 3px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        color: $color_gray;
+        margin-left: 0.7rem;
+    }
+
+    &__icon {
+        width: 0.8rem;
+        height: 0.8rem;
+        stroke: $color_white;
+    }
+}
+
+.custom-input {
+    background-color: $color_header;
+    border: 1px solid $color_border;
+    border-radius: 0.33rem;
+    padding: 0.8rem 1rem;
+    transition: 0.3s ease-in-out;
+    outline: none;
+
+    &::placeholder {
+        color: $color_gray;
+    }
+
+    &:hover {
+        border-color: darken($color_border, 10%);
+    }
+
+    &:focus {
+        border-color: lighten($color_primary, 15%);
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    // .form-group__title
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        margin-bottom: 0.7rem;
+    }
+
+    &__error {
+        color: $color_red;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+    }
+
+    // .form-group__input
+
+    &__input {
+
+    }
+
+    &-text {
+
+    }
+
+    &__question {
+        display: flex;
+        align-items: center;
+
+        .btn {
+            margin-left: 0.2rem;
+
+            @media ($media_sm) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media ($media_sm) {
+            justify-content: center;
+        }
+    }
+
+    &__button {
+        padding: .65rem 2.2rem;
+
+        &.btn--clean {
+            padding: 0;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1.2rem;
+
+            @media ($media_sm) {
+                margin: 0 0 1rem 0;
+            }
+        }
+
+        @media ($media_sm) {
+            justify-content: center;
+            width: 100%;
+        }
+
+        &--full {
+            width: 100%;
+            margin-top: 1rem;
+
+            @media ($media_sm) {
+                margin-top: 0;
+                font-size: 0.9rem;
+            }
+        }
+
+    }
+}
+
+.select-group {
+    display: inline-flex;
+    flex-direction: column;
+
+    // .select-group__label
+
+    &__label {
+        color: $color_gray;
+        margin-bottom: 0.3rem;
+        margin-left: 15px;
+    }
+
+    // .select-group__select
+
+    &__select {
+
+    }
+
+    &__primary {
+        color: $color_primary;
+    }
+}
+
+
+.preview {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .btn {
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.input-search {
+    display: inline-flex;
+    position: relative;
+
+    // .input-search__field
+
+    &__field {
+        width: 100%;
+        background-color: $color_white;
+        border-radius: 0.5rem;
+        padding-right: 2.5rem;
+    }
+
+    // .input-search__icon
+
+    &__icon {
+        width: 1.3rem;
+        height: 1.3rem;
+        position: absolute;
+        right: 0.7rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.input-sort {
+    display: flex;
+    align-items: center;
+
+    // .input-sort__title
+
+    &__title {
+        color: $color_gray;
+        margin-right: 0.75rem;
+    }
+
+    // .input-sort__select
+
+    &__select {
+
+        .selectric {
+            background-color: $color_white;
+
+            &-wrapper {
+                min-width: 3rem;
+            }
+
+            .button {
+                background-color: $color_white;
+            }
+        }
+    }
+}
+
+
+// === / Mixins ===

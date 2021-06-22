@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "Runello"
+		})
+
+	</head>
+	<body>
+		
+
+		@@include("_header_empty.html")
+
+		<section class="section-outer section-main">
+			<div class="section-inner preview">
+
+				<a href="./main.html" class="btn">Основная страница</a>
+
+				<button class="btn" data-modal="modal_enter">Модалка "Вход"</button>
+				<button class="btn" data-modal="modal_reg">Модалка "Регистрация"</button>
+				<button class="btn" data-modal="modal_restore">Модалка "Восстановление пароля"</button>
+			</div>
+		</section>
+
+		<!-- <section class="section-outer section-mixins">
+			<div class="section-inner mixins">
+
+				<div class="channel">
+					<div class="channel__picture">
+						<img class="channel__img" src="./img/table_img_1.png" alt="Изображение канала">
+					</div>
+					<div class="channel__content">
+						<h3 class="channel__title">HH Саратов, канал для подбора персонала</h3>
+						<a href="#" class="channel__tag">@SaratovHR</a>
+					</div>
+				</div>
+
+				<div class="channel">
+					<div class="channel__picture">
+						<img class="channel__img" src="./img/table_img_2.png" alt="Изображение канала">
+					</div>
+					<div class="channel__content">
+						<h3 class="channel__title">Фриланс найм. Только долгосрочная перспектива</h3>
+						<a href="#" class="channel__tag">@FlAllTime</a>
+					</div>
+				</div>
+
+				<button class="btn">Канал выбран</button>
+				<button class="btn btn--bordered">Выбрать канал</button>
+				<button class="btn btn--transparent">Удалить</button>
+				<button class="btn btn--big">Войти</button>
+
+				<button class="btn">
+					<div class="btn__icon btn__icon--white btn__icon--left">
+						<svg class="btn__svg btn__svg--primary"><use xlink:href='img/main.svg#icon-checkbox'></use></svg>
+					</div>
+					<span>Канал выбран</span>
+				</button>
+
+				<button class="btn btn--big">
+					<span>Следующий шаг</span>
+					<div class="btn__icon btn__icon--right">
+						<svg class="btn__svg btn__svg--arrow"><use xlink:href='img/main.svg#icon-arrowDown'></use></svg>
+					</div>
+				</button>
+
+				<button class="btn btn--big btn--clean">Удалить все</button>
+
+				<button class="btn btn--clean">
+					<span>Следующая</span>
+					<div class="btn__icon btn__icon--right">
+						<svg class="btn__svg btn__svg--arrow btn__svg--primary"><use xlink:href='img/main.svg#icon-arrowDown'></use></svg>
+					</div>
+				</button>
+
+				<button class="btn btn--clean btn--trashcan">
+					<div class="btn__icon">
+						<svg class="btn__svg btn__svg--trashcan"><use xlink:href='img/main.svg#icon-trashcan'></use></svg>
+					</div>
+				</button>
+
+				<label class="checkbox">
+					<input class="checkbox__origin visually_hidden" type="checkbox">
+					<div class="checkbox__custom">
+						<svg class="checkbox__icon"><use xlink:href='img/main.svg#icon-checkbox'></use></svg>
+					</div>
+					<span class="checkbox__text">Запомнить меня</span>
+				</label>
+
+				<div class="form-group">
+					<span class="form-group__title">Введите E-mail</span>
+					<input class="form-group__input custom-input" type="email" placeholder="Mail@gmail.com">
+					<span class="form-group__error">Сообщение об ошибке</span>
+				</div>
+
+				<div class="form-group">
+					<div class="form-group__header">
+						<span class="form-group__title">Введите пароль</span>
+						<button class="btn btn--clean form-group__link">
+							<span>Забыли пароль?</span>
+						</button>
+					</div>
+					<input class="form-group__input custom-input" type="password" placeholder="123456">
+				</div>
+
+				<div class="form-group">
+					<div class="form-group__header">
+						<span class="form-group__title">Введите пароль</span>
+						<button class="btn btn--clean form-group__link">
+							<span>Забыли пароль?</span>
+						</button>
+					</div>
+					<input class="form-group__input custom-input" type="password" placeholder="123456">
+				</div>
+
+				<div class="select-group">
+					<span class="select-group__label">Направление</span>
+					<div class="select-group__select">
+						<select name="mySelect">
+							<option class="select-group__data" value="1" selected>Управление персоналом (3)</option>
+							<option value="2">Управление персоналом</option>
+							<option value="3">Управление персоналом</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="input-search">
+					<input type="text" class="input-search__field custom-input" placeholder="Поиск по названию канала">
+					<svg class="input-search__icon"><use xlink:href='img/main.svg#icon-search'></use></svg>
+				</div>
+
+				<div class="input-sort">
+					<span class="input-sort__title">Выводить по</span>
+					<div class="input-sort__select">
+						<select name="mySelect">
+							<option value="1" selected>12</option>
+							<option value="2">13</option>
+							<option value="3">14</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="input-channels">
+					<div class="input-channels__select">
+						<select name="mySelect">
+							<option value="1" selected>Выбранные каналы (3)</option>
+							<option value="2">Выбранные каналы</option>
+							<option value="3">Выбранные каналы</option>
+						</select>
+					</div>
+					<span class="input-channels__count">6 500 ₽</span>
+				</div>
+
+			</div>
+		</section> -->
+
+		@@include("_footer.html")
+
+	</body>
+</html>
