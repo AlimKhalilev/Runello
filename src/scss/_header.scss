@@ -1,20 +1,18 @@
 // === header === [ Стили для навбара, используемые на всех страницах ] ===
 
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+}
+
 .section-header {
     position: relative;
     background-color: $color_header;
     padding: 0.9rem 0;
     box-shadow: 0px 2px 6px rgba(86, 42, 1, 0.06);
     border-bottom: 1px solid $color_border;
-
-    position: fixed;
-    width: 100%;
-    top: 3.5rem;
-    z-index: 11;
-
-    @media ($media_sm) {
-        top: 0;
-    }
 
     .section-inner {
     
@@ -201,8 +199,7 @@
 .section-menu {
     background-color: $color_primary;
     height: 3.5rem;
-    position: fixed;
-    width: 100%;
+    position: relative;
     z-index: 12;
     margin: 0;
     padding: 0;
