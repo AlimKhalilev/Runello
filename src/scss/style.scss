@@ -17,7 +17,7 @@
 // === main ===
 
 .section-main {
-    margin-top: var(--fixed_header_margin);
+    margin-top: calc(var(--fixed_header_margin) * 1.7);
     padding: var(--section_padding) 0;
 
     @media ($media_lg) {
@@ -25,6 +25,7 @@
     }
 
     @media ($media_sm) {
+        margin-top: var(--fixed_header_margin);
         padding-top: var(--section_padding);
     }
 
@@ -52,12 +53,20 @@
             display: inline-flex;
             align-items: center;
             padding: 1.3rem;
-            border-top: 3px solid transparent;
+            border-bottom: 3px solid transparent;
             text-decoration: none;
             border-left: 1px solid $color_border;
 
             &:last-child {
                 border-right: 1px solid $color_border;
+            }
+
+            &--product {
+                display: none;
+
+                @media ($media_sm) {
+                    display: inline-flex;
+                }
             }
 
             &--active {

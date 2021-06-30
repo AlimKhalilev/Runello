@@ -1,6 +1,54 @@
+<!-- <div class="header-menu">
+    <div class="header-menu__item product">
+        <svg class='product__icon icon icon-Rss'><use xlink:href='img/sprite.svg#Rss'></use></svg>
+        <a href="#" class="product__link">Новостная лента</a>
+    </div>
+    <div class="header-menu__item product product--active">
+        <svg class='product__icon icon icon-GridFour'><use xlink:href='img/sprite.svg#GridFour'></use></svg>
+        <a href="#" class="product__link">Телеграм биржа</a>
+    </div>
+    <div class="header-menu__item--last product">
+        <svg class='product__icon icon icon-Globe'><use xlink:href='img/sprite.svg#Globe'></use></svg>
+        <span class="product__link">Русский</span>
+    </div>
+</div> -->
+
+<menu class="section-outer section-menu">
+    <div class="section-inner header-menu">
+        <a href="#" class="header-menu__item product">
+            <svg class='product__icon icon icon-Rss'><use xlink:href='img/sprite.svg#Rss'></use></svg>
+            <span class="product__text">Новостная лента</span>
+        </a>
+        <a href="#" class="header-menu__item product product--active">
+            <svg class='product__icon icon icon-GridFour'><use xlink:href='img/sprite.svg#GridFour'></use></svg>
+            <span class="product__text">Биржа вакансий</span>
+        </a>
+        <label class="header-menu__item--last product product--lang">
+
+            <input type="checkbox" class="product__checkbox visually_hidden">
+
+            <svg class='product__icon icon icon-Globe'><use xlink:href='img/sprite.svg#Globe'></use></svg>
+            <span class="product__text">Русский</span>
+            <svg class="product__arrow"><use xlink:href='img/main.svg#icon-arrowDown'></use></svg>
+
+            <div class="product__dropdown dropdown-lang">
+                <a href="#" class="dropdown-lang__link dropdown-lang__link--active">Русский</a>
+                <a href="#" class="dropdown-lang__link">English</a>
+                <a href="#" class="dropdown-lang__link">Spain</a>
+                <a href="#" class="dropdown-lang__link">Germany</a>
+                <a href="#" class="dropdown-lang__link">Italy</a>
+            </div>
+
+        </label>
+    </div>
+</menu>
+
 <header class="section-outer section-header">
+
     <div class="section-inner header">
+
         <div class="header-logo">
+
             <div class="burger" data-burger="button">
                 <input type="checkbox">
                 <span class="burger-item1"></span>
@@ -27,6 +75,36 @@
         <div class="header-controls" data-burger="menu">
         
             <div class="tabs">
+
+                <a href="#" class="tab__item tab__item--product product">
+                    <svg class='product__icon icon icon-Rss'><use xlink:href='img/sprite.svg#Rss'></use></svg>
+                    <span class="product__text">Новостная лента</span>
+                </a>
+
+                <a href="#" class="tab__item tab__item--product product product--active">
+                    <svg class='product__icon icon icon-GridFour'><use xlink:href='img/sprite.svg#GridFour'></use></svg>
+                    <span class="product__text">Биржа вакансий</span>
+                </a>
+
+                <label class="tab__item tab__item--product product product--lang">
+        
+                    <input type="checkbox" class="product__checkbox visually_hidden">
+        
+                    <svg class='product__icon icon icon-Globe'><use xlink:href='img/sprite.svg#Globe'></use></svg>
+                    <span class="product__text">Русский</span>
+                    <svg class="product__arrow"><use xlink:href='img/main.svg#icon-arrowDown'></use></svg>
+        
+                    <div class="product__dropdown dropdown-lang">
+                        <a href="#" class="dropdown-lang__link dropdown-lang__link--active">Русский</a>
+                        <a href="#" class="dropdown-lang__link">English</a>
+                        <a href="#" class="dropdown-lang__link">Spain</a>
+                        <a href="#" class="dropdown-lang__link">Germany</a>
+                        <a href="#" class="dropdown-lang__link">Italy</a>
+                    </div>
+        
+                </label>
+
+
                 <a class="tab__item tab__item--active" href="#">
                     <svg class="tab__icon"><use xlink:href='img/main.svg#icon-createVacancy'></use></svg>
                     <span class="tab__text">Создать вакансию</span>

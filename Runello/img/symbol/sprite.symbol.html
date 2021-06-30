@@ -20,6 +20,9 @@ They might well be outsourced to an external stylesheet of course.
 
 <style type="text/css">
 	.svg-ArrowsDownUp-dims { width: 12px; height: 14px; }
+	.svg-Globe-dims { width: 24px; height: 24px; }
+	.svg-GridFour-dims { width: 24px; height: 24px; }
+	.svg-Rss-dims { width: 24px; height: 24px; }
 	.svg-arrow_down-dims { width: 8px; height: 6px; }
 	.svg-checkbox-dims { width: 13px; height: 10px; }
 	.svg-completeOrders-dims { width: 20px; height: 20px; }
@@ -52,6 +55,9 @@ for further details on how to create this embeddable sprite variant.
 
 <svg width="0" height="0" style="position:absolute">
 		<symbol fill="currentColor" viewBox="0 0 12 14" id="ArrowsDownUp" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M.646 10.646a.5.5 0 01.708 0L3 12.293l1.646-1.647a.5.5 0 01.708.708l-2 2a.5.5 0 01-.708 0l-2-2a.5.5 0 010-.708z" stroke="transparent"/><path fill-rule="evenodd" clip-rule="evenodd" d="M3 .5a.5.5 0 01.5.5v12a.5.5 0 01-1 0V1A.5.5 0 013 .5zM8.646.646a.5.5 0 01.708 0l2 2a.5.5 0 01-.708.708L9 1.707 7.354 3.354a.5.5 0 11-.708-.708l2-2z" stroke="transparent"/><path fill-rule="evenodd" clip-rule="evenodd" d="M9 .5a.5.5 0 01.5.5v12a.5.5 0 01-1 0V1A.5.5 0 019 .5z" stroke="transparent"/></symbol>
+		<symbol fill="currentColor" viewBox="0 0 24 24" id="Globe" xmlns="http://www.w3.org/2000/svg"><path d="M12 21a9 9 0 100-18 9 9 0 000 18z" stroke="currentColor" stroke-width="1.024" stroke-miterlimit="10" fill="transparent"/><path d="M3.513 9h16.974M3.513 15h16.975" stroke="currentColor" stroke-width="1.024" stroke-linecap="round" stroke-linejoin="round" fill="transparent"/><path d="M12 20.759c2.071 0 3.75-3.922 3.75-8.759S14.071 3.242 12 3.242c-2.071 0-3.75 3.921-3.75 8.758S9.929 20.76 12 20.76z" stroke="currentColor" stroke-width="1.024" stroke-miterlimit="10" fill="transparent"/></symbol>
+		<symbol fill="currentColor" viewBox="0 0 24 24" id="GridFour" xmlns="http://www.w3.org/2000/svg"><path d="M19.125 4.125H4.875a.75.75 0 00-.75.75v14.25c0 .414.336.75.75.75h14.25a.75.75 0 00.75-.75V4.875a.75.75 0 00-.75-.75zM12 4.125v15.75M19.875 12H4.125" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="transparent"/></symbol>
+		<symbol fill="currentColor" viewBox="0 0 24 24" id="Rss" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 13.5a6 6 0 016 6M4.5 9A10.5 10.5 0 0115 19.5M4.5 4.5a15 15 0 0115 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="transparent"/><path d="M4.875 20.25a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" stroke="transparent"/></symbol>
 		<symbol fill="currentColor" viewBox="0 0 8 6" id="arrow_down" xmlns="http://www.w3.org/2000/svg"><path d="M7 1.5l-3 3-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="transparent"/></symbol>
 		<symbol fill="currentColor" viewBox="0 0 13 10" id="checkbox" xmlns="http://www.w3.org/2000/svg"><path d="M1 5l4.23 4L12 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="transparent"/></symbol>
 		<symbol fill="currentColor" viewBox="0 0 20 20" id="completeOrders" xmlns="http://www.w3.org/2000/svg"><path d="M15.834 1.667H4.167a.833.833 0 00-.833.833v15c0 .46.373.833.833.833h11.666c.46 0 .834-.373.834-.833v-15a.833.833 0 00-.834-.833z" stroke="currentColor" stroke-width="1.667" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.083 12.5h5.834M7.083 15H10M12.5 5.417L9.167 8.75 7.5 7.083" stroke="currentColor" stroke-width="1.667" stroke-linecap="round" stroke-linejoin="round" fill="transparent"/></symbol>
@@ -100,6 +106,39 @@ embedded above. They may be styled via CSS.
 						
 					</div>
 					<h2>ArrowsDownUp</h2>
+				</li>
+				<li title="Globe">
+					<div class="icon-box">
+						
+						<!-- Globe -->
+						<svg class="svg-Globe-dims">
+							<use xlink:href="#Globe"></use>
+						</svg>
+						
+					</div>
+					<h2>Globe</h2>
+				</li>
+				<li title="GridFour">
+					<div class="icon-box">
+						
+						<!-- GridFour -->
+						<svg class="svg-GridFour-dims">
+							<use xlink:href="#GridFour"></use>
+						</svg>
+						
+					</div>
+					<h2>GridFour</h2>
+				</li>
+				<li title="Rss">
+					<div class="icon-box">
+						
+						<!-- Rss -->
+						<svg class="svg-Rss-dims">
+							<use xlink:href="#Rss"></use>
+						</svg>
+						
+					</div>
+					<h2>Rss</h2>
 				</li>
 				<li title="arrow_down">
 					<div class="icon-box">
@@ -232,6 +271,39 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>ArrowsDownUp</h2>
 				</li>
+				<li title="Globe">
+					<div class="icon-box">
+						
+						<!-- Globe -->
+						<svg class="svg-Globe-dims">
+							<use xlink:href="../sprite.svg#Globe"></use>
+						</svg>
+						
+					</div>
+					<h2>Globe</h2>
+				</li>
+				<li title="GridFour">
+					<div class="icon-box">
+						
+						<!-- GridFour -->
+						<svg class="svg-GridFour-dims">
+							<use xlink:href="../sprite.svg#GridFour"></use>
+						</svg>
+						
+					</div>
+					<h2>GridFour</h2>
+				</li>
+				<li title="Rss">
+					<div class="icon-box">
+						
+						<!-- Rss -->
+						<svg class="svg-Rss-dims">
+							<use xlink:href="../sprite.svg#Rss"></use>
+						</svg>
+						
+					</div>
+					<h2>Rss</h2>
+				</li>
 				<li title="arrow_down">
 					<div class="icon-box">
 						
@@ -339,7 +411,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Tue, 22 Jun 2021 14:44:17 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+			<p>Generated at Wed, 30 Jun 2021 19:14:38 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>
