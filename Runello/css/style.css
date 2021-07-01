@@ -2740,9 +2740,6 @@ body.hideScroll {
   .section-header .header-controls .tabs .tab__item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 
   .section-main {
@@ -2851,7 +2848,6 @@ body.hideScroll {
         -ms-flex-align: center;
             align-items: center;
     border-top: 0;
-    margin-top: 2rem;
   }
 
   .section-header .header-controls .tabs .tab__item {
